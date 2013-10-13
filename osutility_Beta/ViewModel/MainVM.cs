@@ -9,12 +9,19 @@ using System.Windows.Input;
 
 namespace osutility_Beta.ViewModel
 {
-    class MainVM:ObservableObject
+    class MainVM : ObservableObject
     {
         public MainVM()
         {
             //初始化源
             this.ShowMessage = "数据模型加载";
+
+            this.AvmListItem = new List<ChildVM.ItemVM示例类>() 
+            {
+                 new ChildVM.ItemVM示例类(){ AStringBody="1st Item"},
+                 new ChildVM.ItemVM示例类(){ AStringBody="2nd Item"},
+                 new ChildVM.ItemVM示例类(){ AStringBody="3rd Item"},
+            };
         }
 
         /// <summary>
@@ -22,7 +29,7 @@ namespace osutility_Beta.ViewModel
         /// </summary>
         #region 自动更新属性 Prop
 
-         private string _ShowMessage;
+        private string _ShowMessage;
         /// <summary>
         /// 提示信息
         /// </summary>
@@ -35,6 +42,21 @@ namespace osutility_Beta.ViewModel
                 RaisePropertyChanged("ShowMessage");
             }
         }
+
+        private List<ChildVM.ItemVM示例类> _AvmListItem;
+        /// <summary>
+        /// 动态获取列表与集合示范。
+        /// </summary>
+        public List<ChildVM.ItemVM示例类> AvmListItem
+        {
+            get { return _AvmListItem; }
+            set
+            {
+                _AvmListItem = value;
+                this.RaisePropertyChanged("AvmListItem");
+            }
+        }
+
 
         #endregion
 

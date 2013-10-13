@@ -1,8 +1,24 @@
 ﻿<Window x:Class="osutility_Beta.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525"
+        WindowStartupLocation="CenterScreen"
+        DataContext="{Binding Main, Source={StaticResource Locator}}"        >
+
     <Grid>
-        
+        <StackPanel>
+            <Button Content="show" Click="Button_Click"/>
+            
+            <TextBlock Text="{Binding ShowMessage}" />
+            <ListBox ItemsSource="{Binding AvmListItem}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <WrapPanel>
+                            <TextBlock Text="{Binding AStringBody}"/>
+                        </WrapPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
     </Grid>
 </Window>

@@ -6,7 +6,7 @@ using System.Text;
 namespace osuService.LibFactory
 {
     /// <summary>
-    /// 这是一个类工厂
+    /// 这是一个类工厂，用于公开所有Service逻辑，与界面交互的唯一通道
     /// </summary>
     class Lib1
     {

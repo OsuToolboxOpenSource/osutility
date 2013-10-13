@@ -7,6 +7,6 @@ namespace osuService.IClass_1
 {
     interface IClassTemp
     {
-        public string DoingYou(string You);
+        string DoingYou(string You);
     }
 }
