@@ -1,27 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
-using GalaSoft.MvvmLight.Messaging;
-using GalaSoft.MvvmLight;
+using System.Collections.Generic;
 using System.Windows.Input;
 
 namespace osutility_Beta.ViewModel
 {
-    class MainVM : ObservableObject
+    /// <summary>
+    /// This class contains properties that a View can data bind to.
+    /// <para>
+    /// See http://www.galasoft.ch/mvvm
+    /// </para>
+    /// </summary>
+    public class TestViewModel : ViewModelBase
     {
-        public MainVM()
+        /// <summary>
+        /// Initializes a new instance of the Test class.
+        /// </summary>
+        public TestViewModel()
         {
             //初始化源
-            this.ShowMessage = "数据模型加载";
+            ShowMessage = "可以输入要显示的信息，以便显示。";
 
-            this.AvmListItem = new List<ChildVM.ItemVM示例类>() 
+            AvmListItem = new List<ChildVM.ItemVM示例类>() 
             {
                  new ChildVM.ItemVM示例类(){ AStringBody="1st Item"},
                  new ChildVM.ItemVM示例类(){ AStringBody="2nd Item"},
                  new ChildVM.ItemVM示例类(){ AStringBody="3rd Item"},
             };
+        }
+
+        /// <summary>
+        /// 回收源
+        /// </summary>
+        public override void Cleanup()
+        {
+            base.Cleanup();
         }
 
         /// <summary>
@@ -83,7 +96,7 @@ namespace osutility_Beta.ViewModel
 
         private void Ex_UpdateShowMessage()
         {
-            this.ShowMessage = "我改变了消息提示";
+            System.Windows.MessageBox.Show(ShowMessage);
         }
 
         #endregion

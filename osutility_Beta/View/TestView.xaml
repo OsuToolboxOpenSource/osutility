@@ -1,0 +1,27 @@
+﻿<Window x:Class="osutility_Beta.View.TestView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ignore="http://www.ignore.com"
+        mc:Ignorable="d ignore"
+        Height="320" Width="480"
+        DataContext="{Binding TestVM, Source={StaticResource Locator}}">
+
+    <Grid>
+        <StackPanel>
+            <Button Content="ShowMessage" Command="{Binding Cmd_UpdateShowMessage}"/>
+            <TextBox Text="{Binding ShowMessage}"/>
+            <ListBox ItemsSource="{Binding AvmListItem}" >
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <CheckBox IsChecked="{Binding IsBeChecked}"/>
+                            <TextBlock Text="{Binding AStringBody}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+    </Grid>
+</Window>

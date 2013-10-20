@@ -3,22 +3,24 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525"
         WindowStartupLocation="CenterScreen"
-        DataContext="{Binding Main, Source={StaticResource Locator}}"        >
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"        
+        DataContext="{Binding MainVM, Source={StaticResource Locator}}"        >
 
-    <Grid>
-        <StackPanel>
-            <Button Content="show" Click="Button_Click"/>
-            
-            <TextBlock Text="{Binding ShowMessage}" />
-            <ListBox ItemsSource="{Binding AvmListItem}">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <WrapPanel>
-                            <TextBlock Text="{Binding AStringBody}"/>
-                        </WrapPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-        </StackPanel>
-    </Grid>
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resource/Skin/MainSkin.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Border BorderBrush="Orange" BorderThickness="1">
+        <Grid >
+            <StackPanel>
+                <Button Content="显示测试页" Height="40" Command="{Binding ShowTestWindow}"/>
+                <Button Content="显示BeatMap页" Height="40" Command="{Binding ShowBeatMapWindow}" />
+            </StackPanel>
+        </Grid>
+    </Border>
+  
 </Window>

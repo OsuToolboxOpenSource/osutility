@@ -14,8 +14,6 @@ namespace osutility_Beta.ViewModel
         /// </summary>
         public ViewModelLocator()
         {
-            ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
-
             #region DesignMode设计时（未使用）
             ////if (ViewModelBase.IsInDesignModeStatic)
             ////{
@@ -29,21 +27,90 @@ namespace osutility_Beta.ViewModel
             ////}
             #endregion
 
-            //这儿好像是简单的“控制反转”，暂时不理解，（类似于中介公司）
-            SimpleIoc.Default.Register<MainVM>();
+            ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
+            Creat_Main();
+            Creat_BeatMap();
+            Creat_Test();
         }
 
-        public static void Cleanup()
+
+        #region Creat_创建对象
+
+        private void Creat_Main()
+        {
+            //这儿好像是简单的“控制反转”，暂时不理解，（类似于中介公司）
+            SimpleIoc.Default.Register<MainViewModel>();
+        }
+        private void Creat_BeatMap()
+        {
+            SimpleIoc.Default.Register<BeatMapViewModel>();
+        }
+        private void Creat_Test()
+        {
+            SimpleIoc.Default.Register<TestViewModel>();
+        }
+
+        #endregion
+
+        #region CleanUp销毁对象
+        public static void CleanupAll()
         {
             // TODO Clear the ViewModels（销毁模型对象）
+            CleanMain();
+            CleanBeatMap();
         }
 
-
-        public MainVM Main
+        private static void CleanBeatMap()
         {
-            get { return ServiceLocator.Current.GetInstance<MainVM>(); }
+            SimpleIoc.Default.Unregister<BeatMapViewModel>();
         }
 
+        private static void CleanMain()
+        {
+            SimpleIoc.Default.Unregister<MainViewModel>();
+        }
+        #endregion
+
+        #region vm_对象
+
+        /// <summary>
+        /// Gets the MainViewModel property.
+        /// </summary>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic", Justification = "This non-static member is needed for data binding purposes.")]
+        public MainViewModel MainVM
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<MainViewModel>();
+            }
+        }
+
+        /// <summary>
+        /// Gets the BeatMapViewModel property.
+        /// </summary>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic", Justification = "This non-static member is needed for data binding purposes.")]
+        public BeatMapViewModel BeatMapVM
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<BeatMapViewModel>();
+            }
+        }
+
+        /// <summary>
+        /// Gets the TestVM property.
+        /// </summary>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance",
+            "CA1822:MarkMembersAsStatic",
+            Justification = "This non-static member is needed for data binding purposes.")]
+        public TestViewModel TestVM
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<TestViewModel>();
+            }
+        }
+        #endregion
 
     }
 }

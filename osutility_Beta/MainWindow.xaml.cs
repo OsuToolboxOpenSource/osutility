@@ -24,17 +24,6 @@ namespace osutility_Beta
             InitializeComponent();
         }
 
-        /// <summary>
-        /// 此方法仅在测试界面交互时使用，无实际意义。
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            //查看当前窗口绑定的数据源类型。
-            MessageBox.Show(this.DataContext.ToString());
-        }
-
      
     }
 }
