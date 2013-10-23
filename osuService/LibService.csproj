@@ -7,8 +7,8 @@
     <ProjectGuid>{C280011A-BBE1-4046-A00B-4F0311E8FDAD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>osuService</RootNamespace>
-    <AssemblyName>osuService</AssemblyName>
+    <RootNamespace>OsuService.LibService</RootNamespace>
+    <AssemblyName>LibService</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

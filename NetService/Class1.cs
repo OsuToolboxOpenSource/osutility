@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OsuService.LibService.IClass_1
+namespace OsuService.NetService
 {
-    interface IClassTemp
+    public class Class1
     {
-        string DoingYou(string You);
     }
 }

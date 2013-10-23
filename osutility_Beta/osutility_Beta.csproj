@@ -134,9 +134,9 @@
       <Project>{a51f8b2a-6aa3-449e-a45f-dd91cbeed188}</Project>
       <Name>OsuModel</Name>
     </ProjectReference>
-    <ProjectReference Include="..\osuService\osuService.csproj">
+    <ProjectReference Include="..\osuService\LibService.csproj">
       <Project>{c280011a-bbe1-4046-a00b-4f0311e8fdad}</Project>
-      <Name>osuService</Name>
+      <Name>LibService</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

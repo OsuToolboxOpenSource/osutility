@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace osuService.Class_1
+namespace OsuService.LibService.Class_1
 {
     /// <summary>
     /// 这是随便建的一个类，为了演示类工厂
