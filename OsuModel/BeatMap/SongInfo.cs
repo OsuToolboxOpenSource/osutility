@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 
 namespace OsuModel.BeatMap
-{   
+{
     /// <summary>
     /// 地图包，歌曲信息
     /// </summary>

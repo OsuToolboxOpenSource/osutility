@@ -5,6 +5,7 @@ using System.Text;
 
 namespace OsuModel.StoryBoard
 {
+
     public class StoryBoardInfo
     {
         public SBEvent SbEvent { get; set; }

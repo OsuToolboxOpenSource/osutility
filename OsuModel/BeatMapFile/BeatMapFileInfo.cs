@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
-using System.IO;
 
 namespace OsuModel.BeatMapFile
 {
+
     /// <summary>
     /// 代表一个BeatMapSet
     /// </summary>
@@ -65,7 +66,7 @@ namespace OsuModel.BeatMapFile
         public System.Collections.Generic.List<OSUFile> Difficulties;
         public OSBFile StoryBoard;
     }
-    
+
     //未完成
     /// <summary>
     /// 表示osu文件
@@ -96,8 +97,8 @@ namespace OsuModel.BeatMapFile
         /// <summary>
         /// osu文件内嵌SB的信息
         /// </summary>
-        public StoryBoard.StoryBoardInfo SBInfo { get; set; }
-
+        public  StoryBoard.StoryBoardInfo SBInfo { get; set; }
+  
         /// <summary>
         /// 给定BeatMapSet与路径读取文件：一般仅供BeatMapSet调用
         /// </summary>

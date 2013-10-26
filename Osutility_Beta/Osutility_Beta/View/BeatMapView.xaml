@@ -1,0 +1,41 @@
+﻿<Window x:Class="Osutility_Beta.View.BeatMapView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ignore="http://www.ignore.com"
+        mc:Ignorable="d ignore"
+        Height="480" Width="720"
+        DataContext="{Binding ViewModelName, Source={StaticResource Locator}}">
+
+    <DockPanel>
+        <Grid DockPanel.Dock="Top" Height="auto" Background="Azure">
+            <StackPanel>
+                <Menu>
+                    <MenuItem Header="_File" RenderTransformOrigin="0.5,0.5">
+                        <MenuItem Command="ApplicationCommands.Open"/>
+                    </MenuItem>
+                </Menu>
+                <ToolBar>
+                    <CheckBox Content="显示啥"/>
+                    <Separator/>
+                    <CheckBox Content="显示你"/>
+                </ToolBar>
+            </StackPanel>
+
+        </Grid>
+
+        <Grid DockPanel.Dock="Bottom" Height="30" Background="LightBlue">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="状态栏：" />
+                <TextBlock Text="无显示消息"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Background="AliceBlue">
+            <ListBox Background="Transparent">
+
+            </ListBox>
+        </Grid>
+    </DockPanel>
+</Window>
