@@ -42,6 +42,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TempNetClass1.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\OsuModel\OsuModel.csproj">
+      <Project>{1ac04c3c-0cc9-43a5-8c4e-fc6e2bf6c25b}</Project>
+      <Name>OsuModel</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
