@@ -8,6 +8,13 @@
         Height="480" Width="720"
         DataContext="{Binding ViewModelName, Source={StaticResource Locator}}">
 
+    <Window.Resources>
+        <Style x:Key="Line_Orange_Border" TargetType="Border">
+            <Setter Property="BorderBrush" Value="Orange"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+    </Window.Resources>
+
     <DockPanel>
         <Grid DockPanel.Dock="Top" Height="auto" Background="Azure">
             <StackPanel>
@@ -33,9 +40,45 @@
         </Grid>
 
         <Grid Background="AliceBlue">
-            <ListBox Background="Transparent">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="6*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
 
-            </ListBox>
+            <Border Grid.Column="0" Style="{StaticResource Line_Orange_Border}">
+                <ListBox Background="Transparent">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Expander>
+                                <Expander.Header>
+                                    <TextBlock />
+                                </Expander.Header>
+                                <Expander.Content>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="auto"/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        
+                                        <Border>
+                                            <Border.Effect>
+                                                <DropShadowEffect BlurRadius="2" Color="Black"/>
+                                            </Border.Effect>
+                                            <Image Resources="{Binding BeatMapImage}" Stretch="Uniform"/>                                            
+                                        </Border>
+                                        <WrapPanel>
+                                            <!-- 歌曲信息列表 -->
+                                        </WrapPanel>
+                                    </Grid>
+                                </Expander.Content>
+                            </Expander>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Border>
+            <Border Grid.Column="1">
+
+            </Border>
         </Grid>
     </DockPanel>
 </Window>

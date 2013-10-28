@@ -3,22 +3,32 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525"
         WindowStartupLocation="CenterScreen"
-        WindowStyle="None" AllowsTransparency="True" Background="Transparent"        
+        WindowStyle="None" AllowsTransparency="True" 
         DataContext="{Binding MainVM, Source={StaticResource Locator}}"        >
 
-
+    <Window.Background>
+        <ImageBrush ImageSource="Resource\Image\hole.jpg"/>
+    </Window.Background>
+    
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resource/Skin/MainSkin.xaml" />
             </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
+            
+            <Style x:Key="Trans_Button" TargetType="Button">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="BorderBrush" Value="White"/>
+                <Setter Property="Opacity" Value="0.8"/>
+            </Style>
+        </ResourceDictionary>      
     </Window.Resources>
 
     <Border BorderBrush="Orange" BorderThickness="1">
         <Grid >
             <StackPanel>
-                <Grid Background="AliceBlue" MouseDown="WinTitleDrag_MouseDown" Height="25">
+                <Grid MouseDown="WinTitleDrag_MouseDown" Height="25">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="30"/>
                         <ColumnDefinition/>
@@ -28,14 +38,12 @@
                     <Image Source="Resource\Image\start.png" HorizontalAlignment="Left"/>
                     <TextBlock Grid.Column="1" Text="osutility_Beta" VerticalAlignment="Center" />
                     <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
-                        <Button Content="__" Click="Win_mini_Click"/>
-                        <Button Content="O" Click="Win_Max_Click"/>
-                        <Button Content="X" Click="MainWinClose_Click"/>
+                        <Button Content="__" Style="{StaticResource Trans_Button}" Click="Win_mini_Click"/>
+                        <Button Content="O" Style="{StaticResource Trans_Button}" Click="Win_Max_Click"/>
+                        <Button Content="X" Style="{StaticResource Trans_Button}" Click="MainWinClose_Click"/>
                     </StackPanel>
                 </Grid>
-
-                <Button Content="显示测试页" Height="40" Command="{Binding ShowTestWindow}" />
-                <Button Content="显示BeatMap页" Height="40" Command="{Binding ShowBeatMapWindow}" />
+                <Button Content="显示BeatMap页" Style="{StaticResource Trans_Button}"  Command="{Binding ShowBeatMapWindow}" Height="40"/>
             </StackPanel>
         </Grid>
     </Border>
