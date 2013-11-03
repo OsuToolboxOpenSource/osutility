@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace LocalService
+namespace OsuService.LocalService
 {
     /// <summary>
     /// 本地BeatMap基本操作类

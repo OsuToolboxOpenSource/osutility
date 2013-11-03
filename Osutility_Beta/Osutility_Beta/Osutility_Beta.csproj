@@ -65,6 +65,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Service\ServiceFactory\DataFactory.cs" />
     <Compile Include="ViewModel\BeatMapViewModel.cs" />
     <Compile Include="ViewModel\ChildVM\BeatMapItemViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
@@ -122,6 +123,8 @@
     <Resource Include="Resource\Image\start.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Service\RuleLogical\" />
+    <Folder Include="Service\ViewConverter\" />
     <Folder Include="View\VisualEffect\Anime\" />
   </ItemGroup>
   <ItemGroup>
@@ -129,9 +132,13 @@
       <Project>{1ac04c3c-0cc9-43a5-8c4e-fc6e2bf6c25b}</Project>
       <Name>OsuModel</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\OsuService\LibFactory\LibFactory.csproj">
-      <Project>{947093c3-3f05-42ec-b83a-cf3fd6ea85e0}</Project>
-      <Name>LibFactory</Name>
+    <ProjectReference Include="..\..\OsuService\LocalService\LocalService.csproj">
+      <Project>{1d5fd350-c28b-47b8-820a-16fbf3a7d690}</Project>
+      <Name>LocalService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OsuService\NetService\NetService.csproj">
+      <Project>{626d9c07-9f07-4c02-a73a-1da7669f7f6a}</Project>
+      <Name>NetService</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

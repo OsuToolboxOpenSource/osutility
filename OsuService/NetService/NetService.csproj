@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LibNetService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TempNetClass1.cs" />
   </ItemGroup>

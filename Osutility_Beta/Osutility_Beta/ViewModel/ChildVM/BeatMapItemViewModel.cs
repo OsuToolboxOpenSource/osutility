@@ -1,4 +1,5 @@
 ﻿using GalaSoft.MvvmLight;
+using OsuModel.BeatMap;
 
 namespace Osutility_Beta.ViewModel.ChildVM
 {
@@ -15,6 +16,23 @@ namespace Osutility_Beta.ViewModel.ChildVM
         /// </summary>
         public BeatMapItemViewModel()
         {
+            this.BeatMap = new BeatMapInfo();
         }
+
+        private BeatMapInfo _BeatMap;
+        /// <summary>
+        /// 一个歌曲包
+        /// </summary>
+        public BeatMapInfo BeatMap
+        {
+            get { return _BeatMap; }
+            set
+            {
+                _BeatMap = value;
+                this.RaisePropertyChanged("BeatMap");
+            }
+        }
+
+
     }
 }

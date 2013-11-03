@@ -39,7 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LibBeatMap.cs" />
+    <Compile Include="LibLocalService.cs" />
     <Compile Include="LibNetService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

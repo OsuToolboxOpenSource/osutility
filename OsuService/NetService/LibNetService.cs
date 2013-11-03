@@ -5,7 +5,11 @@ using System.Text;
 
 namespace OsuService.NetService
 {
-    public class TempNetClass1
+    public class LibNetService
     {
+        public TempNetClass1 TempNetClass1()
+        {
+            return new TempNetClass1();
+        }
     }
 }

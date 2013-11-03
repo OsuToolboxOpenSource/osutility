@@ -6,6 +6,32 @@ using System.Text;
 namespace OsuModel.BeatMap
 {
     /// <summary>
+    /// BeatMap的基类
+    /// </summary>
+    public class BeatMapInfo
+    {
+        public BeatMapInfo(int mapId = 0, string title = "", string artist = "")
+        {
+            this.MapId = mapId;
+            this.Title = title;
+            this.Artist = artist;
+        }
+
+        /// <summary>
+        /// Id
+        /// </summary>
+        public int MapId { get; set; }
+        /// <summary>
+        /// Map标题
+        /// </summary>
+        public string Title { get; set; }
+        /// <summary>
+        /// Map艺术家
+        /// </summary>
+        public string Artist { get; set; }
+    }
+
+    /// <summary>
     /// 地图包，歌曲信息
     /// </summary>
     public class SongInfo

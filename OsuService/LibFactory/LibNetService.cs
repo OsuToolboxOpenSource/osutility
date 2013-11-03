@@ -1,10 +1,10 @@
-﻿using NetService;
+﻿using OsuService.NetService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace LibFactory
+namespace OsuService.LibFactory
 {
     public class LibNetService
     {

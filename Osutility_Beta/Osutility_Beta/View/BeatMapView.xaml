@@ -24,6 +24,7 @@
                     </MenuItem>
                 </Menu>
                 <ToolBar>
+                    <Button Content="刷新列表" Command=""/>
                     <CheckBox Content="显示啥"/>
                     <Separator/>
                     <CheckBox Content="显示你"/>
