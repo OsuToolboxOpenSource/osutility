@@ -6,7 +6,7 @@
         xmlns:ignore="http://www.ignore.com"
         mc:Ignorable="d ignore"
         Height="480" Width="720"
-        DataContext="{Binding ViewModelName, Source={StaticResource Locator}}">
+        DataContext="{Binding BeatMapVM, Source={StaticResource Locator}}">
 
     <Window.Resources>
         <Style x:Key="Line_Orange_Border" TargetType="Border">
@@ -24,7 +24,7 @@
                     </MenuItem>
                 </Menu>
                 <ToolBar>
-                    <Button Content="刷新列表" Command=""/>
+                    <Button Content="刷新列表" Command="{Binding GetBeatMapListing}"/>
                     <CheckBox Content="显示啥"/>
                     <Separator/>
                     <CheckBox Content="显示你"/>
@@ -47,12 +47,12 @@
             </Grid.ColumnDefinitions>
 
             <Border Grid.Column="0" Style="{StaticResource Line_Orange_Border}">
-                <ListBox Background="Transparent">
+                <ListBox ItemsSource="{Binding BeatMapListing}" Background="Transparent">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Expander>
                                 <Expander.Header>
-                                    <TextBlock />
+                                    <TextBlock Text="{Binding BeatMap.Title}"/>
                                 </Expander.Header>
                                 <Expander.Content>
                                     <Grid>
@@ -60,15 +60,16 @@
                                             <ColumnDefinition Width="auto"/>
                                             <ColumnDefinition/>
                                         </Grid.ColumnDefinitions>
-                                        
+
                                         <Border>
                                             <Border.Effect>
                                                 <DropShadowEffect BlurRadius="2" Color="Black"/>
                                             </Border.Effect>
-                                            <Image Resources="{Binding BeatMapImage}" Stretch="Uniform"/>                                            
+                                            <Image Source="{Binding BeatMapImage}" Stretch="Uniform"/>
                                         </Border>
                                         <WrapPanel>
                                             <!-- 歌曲信息列表 -->
+                                            <TextBlock Text="{Binding BeatMap.Title}"/>
                                         </WrapPanel>
                                     </Grid>
                                 </Expander.Content>

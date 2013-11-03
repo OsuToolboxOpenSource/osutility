@@ -6,8 +6,19 @@
         WindowStyle="None" AllowsTransparency="True" 
         DataContext="{Binding MainVM, Source={StaticResource Locator}}"        >
 
-    <Window.Background>
-        <ImageBrush ImageSource="Resource\Image\hole.jpg"/>
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="MouseEnter">
+            <BeginStoryboard>
+                <Storyboard>
+                    
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+
+        <Window.Background>
+        <ImageBrush ImageSource="Resource\Image\hole.jpg" Stretch="None"/> 
     </Window.Background>
     
     <Window.Resources>
