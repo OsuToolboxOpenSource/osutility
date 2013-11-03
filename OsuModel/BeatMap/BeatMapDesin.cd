@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="OsuModel.BeatMap.BeatMapInfo" Collapsed="true">
+    <Position X="2.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAEAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BeatMap\SongInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OsuModel.BeatMap.SongInfo" Collapsed="true">
+    <Position X="4.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAoEAAUIQAAAQQCAAQoAAAkQAEAQAABIAMAA=</HashCode>
+      <FileName>BeatMap\SongInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="OsuModel.BeatMap.GameMode" Collapsed="true">
+    <Position X="2.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAQAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>BeatMap\SongInfo.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>
