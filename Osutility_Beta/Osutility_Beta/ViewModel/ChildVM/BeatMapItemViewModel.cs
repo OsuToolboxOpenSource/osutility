@@ -16,14 +16,14 @@ namespace Osutility_Beta.ViewModel.ChildVM
         /// </summary>
         public BeatMapItemViewModel()
         {
-            this.BeatMap = new BeatMapInfo();
+            this.BeatMap = new BeatMapBase();
         }
 
-        private BeatMapInfo _BeatMap;
+        private BeatMapBase _BeatMap;
         /// <summary>
-        /// 一个歌曲包
+        /// 一个简单歌曲包
         /// </summary>
-        public BeatMapInfo BeatMap
+        public BeatMapBase BeatMap
         {
             get { return _BeatMap; }
             set
@@ -33,6 +33,18 @@ namespace Osutility_Beta.ViewModel.ChildVM
             }
         }
 
+        private BeatMap_OsuApi _BeatMapOsuApi;
 
+        public BeatMap_OsuApi BeatMapOsuApi
+        {
+            get { return _BeatMapOsuApi; }
+            set
+            {             
+                _BeatMapOsuApi = value;
+                this.RaisePropertyChanged("BeatMapOsuApi");
+            }
+        }
+
+        
     }
 }

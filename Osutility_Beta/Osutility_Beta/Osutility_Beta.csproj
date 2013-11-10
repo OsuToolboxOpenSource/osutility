@@ -66,6 +66,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Service\ServiceFactory\DataFactory.cs" />
+    <Compile Include="Properties\Settings.cs" />
     <Compile Include="ViewModel\BeatMapViewModel.cs" />
     <Compile Include="ViewModel\ChildVM\BeatMapItemViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
@@ -112,9 +113,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />

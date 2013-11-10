@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using OsuModel.BeatMap;
+using OsuService.NetService;
 
 namespace Osutility_Beta.Service.ServiceFactory
 {
@@ -15,22 +16,23 @@ namespace Osutility_Beta.Service.ServiceFactory
     class DataFactory
     {
         LibLocalService zLibLocalService = new LibLocalService();
+        LibNetService zNetService = new LibNetService();
 
         /// <summary>
         /// 由目录列表获取BeatMap信息列表。
         /// </summary>
         /// <param name="pPath">要遍历的目录</param>
         /// <param name="pFilter">文件筛选通配符</param>
-        public List<BeatMapInfo> GetBeatMapListingByDirListing(string pPath, string pFilter)
+        public List<BeatMapBase> GetLocalBeatMapListingByDirListing(string pPath, string pFilter)
         {
-            List<BeatMapInfo> beatMapListing1 = new List<BeatMapInfo>();  //要返回的列表
-            BeatMapInfo beatmap1;  //临时填充
+            List<BeatMapBase> beatMapListing1 = new List<BeatMapBase>();  //要返回的列表
+            BeatMapBase beatmap1;  //临时填充
 
             //获取到存在osu文件的目录，并传入模型
             List<DirectoryInfo> dirs = zLibLocalService.LocalBeatMap().GetBeatMapDirs(pPath, pFilter);
             foreach (var i in dirs)
             {
-                beatmap1 = new BeatMapInfo();
+                beatmap1 = new BeatMapBase();
                 beatmap1.Title = i.Name;
 
                 //此处暂时只获取一个内容，就是目录名称（多数都是BeatMap的名）
@@ -42,6 +44,16 @@ namespace Osutility_Beta.Service.ServiceFactory
 
 
             return beatMapListing1;
+        }
+
+        public List<BeatMap_OsuApi> GetOsuApiBeatMapListingByWeb()
+        {
+            List<BeatMap_OsuApi> beatMapListring1 = new List<BeatMap_OsuApi>();
+
+            string jsonString1=
+            zLibLocalService.JsonSerializerCore().Deserialize(
+
+            return beatMapListring1;
         }
     }
 }

@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BeatMapFile\BeatMapFileInfo.cs" />
+    <Compile Include="BeatMap\BeatMapInfo.cs" />
     <Compile Include="BeatMap\SongInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StoryBoard\SBTime.cs" />

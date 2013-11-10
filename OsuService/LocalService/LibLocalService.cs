@@ -11,9 +11,18 @@ namespace OsuService.LocalService
         /// BeatMap本地交互逻辑
         /// </summary>
         /// <returns></returns>
-        public LocalBeatMap LocalBeatMap()
+        public LocalBeatMapCore LocalBeatMap()
         {
-            return new LocalBeatMap();
+            return new LocalBeatMapCore();
+        }
+
+        /// <summary>
+        /// Json转列表器
+        /// </summary>
+        /// <returns></returns>
+        public JsonSerializerCore JsonSerializerCore()
+        {
+            return new JsonSerializerCore();
         }
     }
 }

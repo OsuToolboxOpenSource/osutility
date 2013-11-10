@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:vm="clr-namespace:Osutility_Beta.ViewModel"
              mc:Ignorable="d"
-             StartupUri="MainWindow.xaml">
+             StartupUri="MainWindow.xaml"
+              Exit="Application_Exit">
     
     <Application.Resources>
         <ResourceDictionary>

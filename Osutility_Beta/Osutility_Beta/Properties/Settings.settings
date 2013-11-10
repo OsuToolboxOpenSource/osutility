@@ -1,7 +1,18 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Osutility_Beta.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AppTitle" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Osutility_Beta</Value>
+    </Setting>
+    <Setting Name="osuDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">E:\NetGame\osu!\Songs</Value>
+    </Setting>
+    <Setting Name="osuAPIkey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5e0580f5781b93f203a9b78c0511c34109611035</Value>
+    </Setting>
+    <Setting Name="osuAPIUrlHead" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://osu.ppy.sh/api/</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

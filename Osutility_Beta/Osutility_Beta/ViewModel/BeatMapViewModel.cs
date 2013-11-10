@@ -26,6 +26,7 @@ namespace Osutility_Beta.ViewModel
         DataFactory zDataFactory = new DataFactory();
 
 
+        
         private List<BeatMapItemViewModel> _BeatMapListing;
         /// <summary>
         /// BeatMap列表
@@ -43,32 +44,68 @@ namespace Osutility_Beta.ViewModel
 
 
 
-        private RelayCommand _GetBeatMapListing;
-
+        private RelayCommand _GetLocalBeatMapListing;
         /// <summary>
-        /// Gets the GetBeatMapListing.
+        /// 获取本地存储的BeatMapListing
         /// </summary>
-        public RelayCommand GetBeatMapListing
+        public RelayCommand GetLocalBeatMapListing
         {
             get
             {
-                return _GetBeatMapListing
-                    ?? (_GetBeatMapListing = new RelayCommand(
+                return _GetLocalBeatMapListing
+                    ?? (_GetLocalBeatMapListing = new RelayCommand(
                                           () =>
                                           {
-                                              Ex_GetBeatMapListing();
+                                              Ex_GetLocalBeatMapListing();
+                                          }));
+            }
+        }
+
+        private RelayCommand _GetOsuApiBeatMapListing;
+
+        /// <summary>
+        /// 由 osu-api 获取BeatMapListing
+        /// </summary>
+        public RelayCommand GetOsuApiBeatMapListing
+        {
+            get
+            {
+                return _GetOsuApiBeatMapListing
+                    ?? (_GetOsuApiBeatMapListing = new RelayCommand(
+                                          () =>
+                                          {
+                                              ExGetOsuApiBeatMapListing();
                                           }));
             }
         }
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+        private void ExGetOsuApiBeatMapListing()
+        {
+            
+        }
+
+
         /// <summary>
         /// 填充BeatMapListing
         /// </summary>
-        private void Ex_GetBeatMapListing()
+        private void Ex_GetLocalBeatMapListing()
         {
-            List<BeatMapInfo> beatMap_s1 = zDataFactory.GetBeatMapListingByDirListing(@"E:\NetGame\osu!\Songs", "*.osu");
+            List<BeatMapBase> beatMap_s1 = zDataFactory.GetLocalBeatMapListingByDirListing(Osutility_Beta.Properties.Settings.Default.osuDirectory, "*.osu");
 
             var beatMapListing1 = new List<BeatMapItemViewModel>();  //准备填充显示列表
             BeatMapItemViewModel beatMapItemVM1;  //列表里的某一项

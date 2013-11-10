@@ -7,7 +7,7 @@
     <ProjectGuid>{626D9C07-9F07-4C02-A73A-1DA7669F7F6A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NetService</RootNamespace>
+    <RootNamespace>OsuService.NetService</RootNamespace>
     <AssemblyName>NetService</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LibNetService.cs" />
+    <Compile Include="OsuApiCore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TempNetClass1.cs" />
   </ItemGroup>

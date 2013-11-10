@@ -24,9 +24,11 @@
                     </MenuItem>
                 </Menu>
                 <ToolBar>
-                    <Button Content="刷新列表" Command="{Binding GetBeatMapListing}"/>
-                    <CheckBox Content="显示啥"/>
+                    <Button Content="获取本地列表" Command="{Binding GetLocalBeatMapListing}"/>
+                    <Button Content="获取osuAPI列表" Command="{Binding GetLocalBeatMapListing}"/>
+                    <Button Content="获取血猫列表（待定）" Command="{Binding GetLocalBeatMapListing}"/>
                     <Separator/>
+                    <CheckBox Content="显示啥"/>
                     <CheckBox Content="显示你"/>
                 </ToolBar>
             </StackPanel>

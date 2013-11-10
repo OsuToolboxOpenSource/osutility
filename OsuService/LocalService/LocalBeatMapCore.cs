@@ -9,7 +9,7 @@ namespace OsuService.LocalService
     /// <summary>
     /// 本地BeatMap基本操作类
     /// </summary>
-    public class LocalBeatMap
+    public class LocalBeatMapCore
     {
         List<DirectoryInfo> beatMapDirs1;
 
