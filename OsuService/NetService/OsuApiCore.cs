@@ -42,9 +42,7 @@ namespace OsuService.NetService
             }
 
             HttpWebResponse response = request.GetResponse() as HttpWebResponse;
-            response.GetResponseStream()
-
-
+            jsonString = response.GetResponseStream().ToString();
 
             return jsonString;
         }
