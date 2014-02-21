@@ -40,6 +40,7 @@ namespace OsuService.LocalService
         public void AddSoloValue(string key, string value)
         {
             Configuration cfa = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+
             //添加
             cfa.AppSettings.Settings.Add(key, value);
             cfa.Save();
