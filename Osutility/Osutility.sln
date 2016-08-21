@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Osutility.Osb", "Osutility.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Osutility.Media", "Osutility.Media\Osutility.Media.csproj", "{AFB6731F-A521-4E4A-8436-9EC46C4BE51D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{D20B7D9B-364D-445C-B741-FCDA96248DF8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{AFB6731F-A521-4E4A-8436-9EC46C4BE51D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFB6731F-A521-4E4A-8436-9EC46C4BE51D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFB6731F-A521-4E4A-8436-9EC46C4BE51D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D20B7D9B-364D-445C-B741-FCDA96248DF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D20B7D9B-364D-445C-B741-FCDA96248DF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D20B7D9B-364D-445C-B741-FCDA96248DF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D20B7D9B-364D-445C-B741-FCDA96248DF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

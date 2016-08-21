@@ -43,8 +43,12 @@
     <Compile Include="IOsbParser.cs" />
     <Compile Include="IOsbReader.cs" />
     <Compile Include="IOsbSerializer.cs" />
+    <Compile Include="Models\OsbAnimation.cs" />
+    <Compile Include="OsbParserFactory.cs" />
+    <Compile Include="Models\OsbSprite.cs" />
     <Compile Include="OsbConfiguration.cs" />
     <Compile Include="OsbException.cs" />
+    <Compile Include="Models\OsbInfo.cs" />
     <Compile Include="OsbParser.cs" />
     <Compile Include="OsbParserException.cs" />
     <Compile Include="OsbReader.cs" />

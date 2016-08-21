@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace Osutility.Osb
 {
-  public interface IOsbReader : IDisposable
-  {
-    IList<OsbInfo> ReadAll();
-  }
+   public static class OsbParserFactory
+    {
+        static OsbParserFactory()
+        {
+
+        }
+
+   
+    }
 }

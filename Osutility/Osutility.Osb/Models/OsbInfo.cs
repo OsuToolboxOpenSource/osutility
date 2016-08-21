@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Osutility.Osb
 {
-  public interface IOsbReader : IDisposable
-  {
-    IList<OsbInfo> ReadAll();
-  }
+    public abstract class OsbInfo
+    {
+    }
 }
